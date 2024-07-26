@@ -48,7 +48,7 @@ img,
 image svg {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 img,
@@ -83,8 +83,15 @@ button {
 
 .container {
     max-width: 980px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
+}
+
+header {
+    position: sticky;
+    background: #fff;
+    z-index: 999;
+    top: 0;
 }
 
 .navbar__container {
@@ -114,37 +121,39 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 144px;
     height: 44px;
+    padding: 16px 24px;
 }
 
 .cta__button:hover {
     background-color: #dd8f3a;
 }
-.hero__banner__section{
-    height: 100svh;
+
+.hero__banner__section {
+    height: auto;
     width: 100%;
-}
-.hero__banner__image__container {
     position: relative;
-    width: 100%;
-    height: 100%;
 }
-.hero__banner__image__container img{
+
+.hero__banner__section img {
+    position: absolute;
+    inset: 0;
     object-fit: cover;
+    z-index: 1;
 }
 
 .hero__banner__content__wrapper {
-    position: absolute;
+    position: relative;
     z-index: 5;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 24px 0;
 }
 
 .hero__banner__content__wrapper h1 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     letter-spacing: 0.16em;
     color: var(--white-color);
@@ -189,7 +198,6 @@ button {
 
 .neom__residential__properties__section__image__container {
     width: 100%;
-    height: auto;
     border-radius: 5px;
 }
 
@@ -201,17 +209,20 @@ button {
     display: flex;
     align-items: center;
 }
-
-/* .trojena__location__indication__image__wrapper {
-    flex: 1;
-} */
-
+.trojena__location__indication__image__wrapper{
+    flex:1;
+    width: 100%;
+    height: 100%;
+}
+.trojena__location__indication__image__wrapper img{
+    aspect-ratio: 1.37 / 1;
+}
 .trojena__location__indication__text__wrapper p {
-    padding-left: 20px;
     font-size: 16px;
     font-weight: 400;
-    color: var(--black-color);
     line-height: 24.96px;
+    color: var(--black-color);
+    padding-left: 20px;
 }
 
 .trojena__unique__section {
@@ -242,10 +253,13 @@ button {
 }
 
 .trojena__unique__image__container {
-    height: 313px;
+    height: 100%;
+    width: 100%;
 }
-.trojena__unique__image__container img{
+
+.trojena__unique__image__container img {
     object-fit: cover;
+    aspect-ratio: 1/1;
 }
 
 .trojena__contact__section {
@@ -254,9 +268,11 @@ button {
 
 .trojena__contact__form__wrapper {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 51px 23px;
+    padding: 51px 26px 51px 23px;
     border-radius: 6px;
-    margin-left: 67px;
+    /* margin-left: 67px; */
+    width: 100%;
+    float: right;
 }
 
 .trojena__contact__form__wrapper h3 {
@@ -274,6 +290,7 @@ button {
     font-weight: 400;
     line-height: 21.14px;
     color: var(--black-color);
+    margin-bottom: 16px;
 }
 
 .form-container {
@@ -325,13 +342,15 @@ button {
     display: block;
     background-color: var(--white-color);
     width: 100%;
-    padding: 19px 15px;
+    padding: 16px 17px;
+    height: 40px;
 }
 
 .contact__form__column__1 input::placeholder {
     color: #D9D9D9;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
+    line-height: 18.72px;
 }
 
 .contact__form__row__3 {
@@ -342,8 +361,9 @@ button {
 }
 
 .contact__form__row__3 p {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
+    line-height: 18.72px;
     letter-spacing: 0.16em;
     color: var(--black-color);
     margin-bottom: 16px;
@@ -370,6 +390,25 @@ button {
     background-color: white;
 }
 
+#read-more-btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21.84px;
+}
+
+#read-more-btn::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    transform: rotate(315deg);
+    margin-left: 7px;
+}
 #yes {
     margin-left: 0;
 }
@@ -396,8 +435,9 @@ button {
 }
 
 .contact__form__row__4 p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
+    line-height: 21.8px;
     color: var(--black-color);
     margin-bottom: 19px;
     display: -webkit-box;
@@ -469,9 +509,11 @@ button {
     .navbar__logo__container {
         max-width: 166px;
     }
-    .hero__banner__section{
-        height: 75svh;
+
+    .hero__banner__section {
+        height: 100svh;
     }
+
     .hero__banner__content__wrapper h2 {
         font-size: 30px;
         font-weight: 700;
@@ -479,6 +521,7 @@ button {
         letter-spacing: 0.16em;
         color: var(--white-color);
     }
+
     .hero__banner__content__wrapper h1 {
         font-size: 35px;
         font-weight: 700;
@@ -536,18 +579,15 @@ button {
 
     .trojena__unique__image__wrapper {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
         gap: 16px;
-    }
-
-    .trojena__unique__image__container {
-        max-height: 256px;
+        width: 100%;
     }
 
     .trojena__unique__image__container__lsat__child {
-        grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column: span 2;
+        max-height: 256px;
     }
 
     .trojena__contact__section {
@@ -559,6 +599,7 @@ button {
         margin-left: 0;
         padding: 0;
         border-radius: 0;
+        width: 100%;
     }
 
     .trojena__contact__form__wrapper h3 {
@@ -594,6 +635,7 @@ button {
     .contact__form__row__3 {
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 19px;
     }
 
     .contact__form__row__3 p {
@@ -644,12 +686,14 @@ button {
         margin-bottom: 12px;
         margin-right: 0;
     }
-    .trojena__footer__social__media__links ul li:not(:last-child){
+
+    .trojena__footer__social__media__links ul li:not(:last-child) {
         margin-right: 35px;
     }
 }
 
 /* media queries ends here */
+
 
 .iti__country-list {
     width: auto;
@@ -657,4 +701,14 @@ button {
 
 .iti--separate-dial-code .iti__selected-flag {
     width: auto;
+}
+
+.iti__selected-country-primary {
+    padding-left: 24px;
+}
+
+.iti--allow-dropdown input.iti__tel-input,
+.iti--allow-dropdown input.iti__tel-input[type=text],
+.iti--allow-dropdown input.iti__tel-input[type=tel] {
+    padding-left: 63px;
 }

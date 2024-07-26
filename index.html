@@ -30,12 +30,13 @@
     <!-- header ends here -->
     <!-- hero banner section starts here -->
     <section class="hero__banner__section">
-        <div class="hero__banner__image__container">
-            <img src="./Uploads/images/hero--banner.jpg" alt="hero--banner">
-            <div class="hero__banner__content__wrapper">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-xl-6 col-md-12">
+        <!-- <div class="hero__banner__image__container"> -->
+        <img src="./Uploads/images/hero--banner.jpg" alt="hero--banner">
+        <div class="hero__banner__content__wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="hero__banner__content__block d-flex align-items-center ">
+                        <div class="col-12 col-xl-7 col-md-12">
                             <h1>
                                 PREVIEW SAUDI ARABIA'S FIRST LUXURY MOUNTAIN RESIDENCES
                             </h1>
@@ -63,13 +64,13 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="col-12 col-xl-6 col-md-12">
-                            <div class="trojena__contact__form__wrapper d-none d-xl-block d-md-none">
+                        <div class="col-12 col-xl-5  d-none d-xl-block d-md-none">
+                            <div class="trojena__contact__form__wrapper">
                                 <h3>Register Your Interest</h3>
                                 <p>Receive exclusive construction updates prior to the highly anticipated public release
                                     next year.
                                     Register your interest in NEOM's epic mountain destination today.</p>
-                                <div class="form-container">
+                                <div class="form__container">
                                     <form id="trojena-form" action="mywork.php" method="POST"
                                         onsubmit="return validateForm()">
                                         <div class="contact__form__row__1">
@@ -87,7 +88,8 @@
                                         <div class="contact__form__row__2">
                                             <div class="contact__form__column__1">
                                                 <label class="label">MOBILE NUMBER</label>
-                                                <input type="tel" id="phone" placeholder="(+966) 920022222">
+                                                <input type="tel" id="phone" placeholder="(+966) 920022222"
+                                                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                                                 <span id="phone-error" class="error">Please fill out the field</span>
                                             </div>
                                             <div class="contact__form__column__1">
@@ -98,7 +100,6 @@
                                         </div>
                                         <div class="contact__form__row__3">
                                             <p>Are You Interested in Buying an Off-Plan Home?</p>
-                                            <!-- <span id="options-error" class="error">Please select an option</span> -->
                                             <div class="contact__form__input__fields">
                                                 <input type="radio" id="yes" value="YES" name="options">
                                                 <label for="yes">Yes</label><br>
@@ -109,15 +110,20 @@
                                             </div>
                                         </div>
                                         <div class="contact__form__row__4">
-                                            <p>By completing this form you are agreeing to being contacted by NEOM. If
+                                            <p>By completing this form you are agreeing to
+                                                being
+                                                contacted by NEOM. If
                                                 you would also
                                                 like to hear updates from other parts of NEOM, please select Yes. We
                                                 will treat your
-                                                information carefully. See our <a href="./">Terms of Use</a> and <a
-                                                    href="./">Privacy
+                                                information carefully. See our <a
+                                                    href="https://policies.google.com/terms">Terms of
+                                                    Use</a> and <a href="https://policies.google.com/privacy">Privacy
                                                     Policy</a> for more details. This
-                                                site is protected by reCAPTCHA and the Google <a href="./">Privacy
-                                                    Policy</a> and <a href="./">Terms of Service</a> apply.
+                                                site is protected by reCAPTCHA and the Google <a
+                                                    href="https://policies.google.com/privacy">Privacy Policy</a> and <a
+                                                    href="https://policies.google.com/terms">Terms of Service</a> apply.
+                                                <button id="hide-content-btn" class="hidden-content">Show Less</button>
                                             </p>
                                             <button class="cta__button contact__form__button"
                                                 type="submit">REGISTER</button>
@@ -130,6 +136,7 @@
                 </div>
             </div>
         </div>
+        <!-- </div> -->
     </section>
     <!-- hero banner section ends here -->
     <!-- residential project section starts here -->
@@ -160,7 +167,7 @@
                                 <div class="contact__form__row">
                                     <div class="contact__form__column__1">
                                         <label class="label">MOBILE NUMBER</label>
-                                        <input type="tel" id="phone" placeholder="(+966) 920022222">
+                                        <input type="tel" id="phone2" placeholder="(+966) 920022222" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                                         <span id="phone-error" class="error">Please fill out the field</span>
                                     </div>
                                     <div class="contact__form__column__1">
@@ -174,11 +181,11 @@
                                     <!-- <span id="options-error" class="error">Please select an option</span> -->
                                     <div class="contact__form__input__fields">
                                         <input type="radio" id="yes" value="YES" name="options">
-                                        <label for="yes">YES</label><br>
+                                        <label for="yes">Yes</label><br>
                                         <input type="radio" id="no" value="NO" name="options">
-                                        <label for="no">NO</label><br>
+                                        <label for="no">No</label><br>
                                         <input type="radio" id="maybe" value="MAYBE" name="options">
-                                        <label for="maybe">MAYBE</label>
+                                        <label for="maybe">Maybe</label>
                                     </div>
                                 </div>
                                 <div class="contact__form__row__4">
@@ -209,7 +216,10 @@
                 natural beauty, extraordinary architecture and all-season weather.
             </p>
             <div class="neom__residential__properties__section__image__container">
-                <img src="./Uploads/images/neom-project.jpg" alt="neom-project-images">
+                <picture>
+                    <source media="(max-width: 960px)" srcset="./Uploads/images/neom-project-2.jpg">
+                    <img src="./Uploads/images/neom-project.jpg" alt="the NEOM project">
+                </picture>                             
             </div>
         </div>
     </section>
@@ -378,6 +388,11 @@
             utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/js/utils.js",
             initialCountry: "SA"
         });
+        const input2 = document.querySelector("#phone2");
+        window.intlTelInput(input2, {
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/js/utils.js",
+            initialCountry: "SA"
+        });
 
         // form validation
 
@@ -453,8 +468,6 @@
                 return isValid;
             }
         });
-
-
     </script>
 </body>
 
