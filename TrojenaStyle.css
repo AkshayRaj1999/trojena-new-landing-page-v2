@@ -474,7 +474,8 @@ header {
     max-height: 100%;
 }
 .contact__form__row__4__yes__btn {
-    color: var(--orange-color);
+    color: var(--orange-color) !important;
+    text-decoration: none !important;
     cursor: pointer;
 }
 
@@ -771,8 +772,8 @@ header {
 #toggleButton::after {
     content: '';
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     margin-left: 4px;
     background-image: url('./Uploads/images/arrow-down.svg');
     background-size: contain;
