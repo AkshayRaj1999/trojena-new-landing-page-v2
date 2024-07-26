@@ -460,12 +460,17 @@ header {
     line-height: 21.8px;
     color: var(--black-color);
     margin-bottom: 19px;
+    height: auto;
+    overflow: hidden;
+    transition: .3s all ease-in-out;
     /* display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden; */
 }
-
+#moreText{
+    max-height: 100%;
+}
 .contact__form__row__4__yes__btn {
     color: var(--orange-color);
     cursor: pointer;
@@ -766,7 +771,7 @@ header {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin-left: 14px;
+    margin-left: 4px;
     background-image: url('./Uploads/images/arrow-down.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -780,4 +785,6 @@ header {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%) rotate(180deg);
+    margin-left: 0;
+    margin-left:14px
 }
