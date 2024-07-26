@@ -142,6 +142,16 @@ header {
     z-index: 1;
 }
 
+.hero__banner__section iframe {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.3);
+    width: 100%;
+    height: 100%;
+}
+
 .hero__banner__content__wrapper {
     position: relative;
     z-index: 5;
@@ -219,9 +229,11 @@ header {
 .trojena__location__indication__image__wrapper img {
     aspect-ratio: 1.37 / 1;
 }
-.trojena__location__indication__text__wrapper{
+
+.trojena__location__indication__text__wrapper {
     flex: 1;
 }
+
 .trojena__location__indication__text__wrapper p {
     font-size: 16px;
     font-weight: 400;
@@ -277,7 +289,8 @@ header {
     border-radius: 6px;
     /* margin-left: 67px; */
     width: 100%;
-    float: right;
+    margin-left: auto;
+    max-width: 349px;
 }
 
 .trojena__contact__form__wrapper h3 {
@@ -452,7 +465,8 @@ header {
     -webkit-box-orient: vertical;
     overflow: hidden; */
 }
-.contact__form__row__4__yes__btn{
+
+.contact__form__row__4__yes__btn {
     color: var(--orange-color);
     cursor: pointer;
 }
@@ -523,6 +537,10 @@ header {
 
     .hero__banner__section {
         height: 100svh;
+    }
+
+    .hero__banner__section iframe {
+        transform: scale(3);
     }
 
     .hero__banner__content__wrapper h2 {
@@ -611,6 +629,7 @@ header {
         padding: 0;
         border-radius: 0;
         width: 100%;
+        max-width: none;
     }
 
     .trojena__contact__form__wrapper h3 {
@@ -741,23 +760,24 @@ header {
     color: var(--black-color);
     position: relative;
 }
+
 #toggleButton::after {
     content: '';
     display: inline-block;
     width: 16px;
     height: 16px;
     margin-left: 14px;
-    background-image: url('./Uploads/images/arrow-down.svg'); 
+    background-image: url('./Uploads/images/arrow-down.svg');
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.3s;
     position: absolute;
     top: 41%;
-  }
-  
-  #toggleButton.show-less::after {
-    background-image:url('./Uploads/images/arrow-down.svg'); 
+}
+
+#toggleButton.show-less::after {
+    background-image: url('./Uploads/images/arrow-down.svg');
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%) rotate(180deg);
-  }
+}
