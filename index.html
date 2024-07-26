@@ -19,7 +19,7 @@
             <div class="container">
                 <div class="navbar__container">
                     <div class="navbar__logo__container">
-                        <a href="https://www.trojena.com/en" target="_blank">
+                        <a href="https://www.neom.com/en-us/regions/trojena" target="_blank">
                             <img src="./Uploads/images/trojena-logo.svg" alt="trojena-logo">
                         </a>
                     </div>
@@ -110,7 +110,7 @@
                                             </div>
                                         </div>
                                         <div class="contact__form__row__4">
-                                            <p>By completing this form you are agreeing to
+                                            <!-- <p>By completing this form you are agreeing to
                                                 being
                                                 contacted by NEOM. If
                                                 you would also
@@ -124,6 +124,25 @@
                                                     href="https://policies.google.com/privacy">Privacy Policy</a> and <a
                                                     href="https://policies.google.com/terms">Terms of Service</a> apply.
                                                 <button id="hide-content-btn" class="hidden-content">Show Less</button>
+                                            </p> -->
+                                            <p class="text" id="text">By completing this form you <span
+                                                    id="dots">...</span><span id="moreText">are agreeing to
+                                                    being
+                                                    contacted by NEOM. If
+                                                    you would also
+                                                    like to hear updates from other parts of NEOM, please select <span class="contact__form__row__4__yes__btn">Yes</span>. We
+                                                    will treat your
+                                                    information carefully. See our <a
+                                                        href="https://policies.google.com/terms">Terms of
+                                                        Use</a> and <a
+                                                        href="https://policies.google.com/privacy">Privacy
+                                                        Policy</a> for more details. This
+                                                    site is protected by reCAPTCHA and the Google <a
+                                                        href="https://policies.google.com/privacy">Privacy Policy</a>
+                                                    and <a href="https://policies.google.com/terms">Terms of Service</a>
+                                                    apply.
+                                                </span>
+                                                <span id="toggleButton">Read More</span>
                                             </p>
                                             <button class="cta__button contact__form__button"
                                                 type="submit">REGISTER</button>
@@ -167,7 +186,8 @@
                                 <div class="contact__form__row">
                                     <div class="contact__form__column__1">
                                         <label class="label">MOBILE NUMBER</label>
-                                        <input type="tel" id="phone2" placeholder="(+966) 920022222" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                                        <input type="tel" id="phone2" placeholder="(+966) 920022222"
+                                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                                         <span id="phone-error" class="error">Please fill out the field</span>
                                     </div>
                                     <div class="contact__form__column__1">
@@ -191,7 +211,7 @@
                                 <div class="contact__form__row__4">
                                     <p>By completing this form you are agreeing to being contacted by NEOM. If you would
                                         also
-                                        like to hear updates from other parts of NEOM, please select Yes. We will treat
+                                        like to hear updates from other parts of NEOM, please select <span class="contact__form__row__4__yes__btn">Yes</span>. We will treat
                                         your
                                         information carefully. See our <a href="./">Terms of Use</a> and <a
                                             href="./">Privacy
@@ -219,7 +239,7 @@
                 <picture>
                     <source media="(max-width: 960px)" srcset="./Uploads/images/neom-project-2.jpg">
                     <img src="./Uploads/images/neom-project.jpg" alt="the NEOM project">
-                </picture>                             
+                </picture>
             </div>
         </div>
     </section>
@@ -228,7 +248,7 @@
     <section class="trojena__location__indicator__section">
         <div class="container">
             <div class="trojena__location__indication__content__wrapper">
-                <div class="trojena__location__indication__image__wrapper">
+                <div class="trojena__location__indication__image__wrapper" alt="neom-map">
                     <img src="./Uploads/images/map.png" alt="trojena-map">
                 </div>
                 <div class="trojena__location__indication__text__wrapper">
@@ -276,7 +296,7 @@
         <div class="container">
             <div class="trojena__footer__wrapper">
                 <div class="trojena__footer__logo__container">
-                    <a href="./">
+                    <a href="https://www.neom.com/en-us/regions/trojena">
                         <img src="./Uploads/images/footer-logo.svg" alt="trojena-logo">
                     </a>
                 </div>
@@ -284,7 +304,7 @@
                     <p>FOLLOW TROJENA ON SOCIAL MEDIA</p>
                     <ul>
                         <li>
-                            <a href="https://www.facebook.com/NEOM">
+                            <a href="https://www.facebook.com/NEOMTROJENA/">
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -297,7 +317,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://x.com/NEOM">
+                            <a href="https://twitter.com/NEOMTROJENA">
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -336,7 +356,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/company/discoverneom/">
+                            <a href="https://www.linkedin.com/company/trojena/">
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -354,7 +374,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/discoverneom/">
+                            <a href="https://www.instagram.com/discovertrojena/">
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -467,6 +487,26 @@
 
                 return isValid;
             }
+        });
+        // script.js
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("toggleButton");
+            const moreText = document.getElementById("moreText");
+            const dots = document.getElementById("dots");
+
+            toggleButton.addEventListener("click", function () {
+                if (moreText.style.display === "none") {
+                    moreText.style.display = "inline";
+                    dots.style.display = "none";
+                    toggleButton.classList.add('show-less');
+                    toggleButton.textContent = 'Show Less'; // Remove arrow text here
+                } else {
+                    moreText.style.display = "none";
+                    dots.style.display = "inline";
+                    toggleButton.classList.remove('show-less');
+                    toggleButton.textContent = 'Read More'; // Remove arrow text here
+                }
+            });
         });
     </script>
 </body>
