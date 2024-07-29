@@ -410,7 +410,6 @@ span.error {
 
 .contact__form__input__fields {
     display: flex;
-    align-items: center;
 }
 
 .contact__form__input__fields input[type="radio"] {

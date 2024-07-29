@@ -87,17 +87,16 @@
                                     next year.
                                     Register your interest in NEOM's epic mountain destination today.</p>
                                 <div class="form__container">
-                                    <form id="trojena-form-1" action="mywork.php" method="POST"
-                                        onsubmit="return validateForm()">
+                                    <form id="trojena-form-1" action="mywork.php" method="POST">
                                         <div class="contact__form__row__1">
                                             <div class="contact__form__column__1">
-                                                <label class="label">FIRST NAME</label>
+                                                <label class="label" for="fname">FIRST NAME</label>
                                                 <input type="text" id="fname" name="fname"
                                                     placeholder="Enter your first name">
                                                 <!-- <span id="fname-error" class="error">Please fill out the field</span> -->
                                             </div>
                                             <div class="contact__form__column__1">
-                                                <label class="label">LAST NAME</label>
+                                                <label class="label" for="lname">LAST NAME</label>
                                                 <input type="text" id="lname" name="lname"
                                                     placeholder="Enter your last name">
                                                 <!-- <span id="lname-error" class="error">Please fill out the field</span> -->
@@ -105,15 +104,15 @@
                                         </div>
                                         <div class="contact__form__row__2">
                                             <div class="contact__form__column__1">
-                                                <label class="label">MOBILE NUMBER</label>
+                                                <label class="label" for="phone">MOBILE NUMBER</label>
                                                 <div class="countrycode__wrap">
-                                                    <input type="tel" id="phone" name="countrycode" >
-                                                    <input type="tel" name="phone" placeholder="(+966) 920022222">
+                                                    <input type="tel" class="countrycode"  name="countrycode" id="countrycode" value="966">
+                                                    <input type="tel" name="phone" placeholder="(+966) 920022222" id="phone">
                                                 </div>
                                                 <!-- <span id="phone-error" class="error">Please fill out the field</span> -->
                                             </div>
                                             <div class="contact__form__column__1">
-                                                <label class="label">EMAIL</label>
+                                                <label class="label" for="email">EMAIL</label>
                                                 <input type="email" id="email" name="email"
                                                     placeholder="Enter your email">
                                             </div>
@@ -191,29 +190,29 @@
                                 onsubmit="return validateForm()">
                                 <div class="contact__form__row">
                                     <div class="contact__form__column__1">
-                                        <label class="label">FIRST NAME</label>
-                                        <input type="text" id="fname2" name="fname-2"
+                                        <label class="label" for="fname2">FIRST NAME</label>
+                                        <input type="text" id="fname2" name="fname2"
                                             placeholder="Enter your first name">
                                         <!-- <span id="fname-error" class="error">Please fill out the field</span> -->
                                     </div>
                                     <div class="contact__form__column__1">
-                                        <label class="label">LAST NAME</label>
-                                        <input type="text" id="lname2" name="lname-2"
+                                        <label class="label" for="lname2">LAST NAME</label>
+                                        <input type="text" id="lname2" name="lname2"
                                             placeholder="Enter your last name">
                                         <!-- <span id="lname-error" class="error">Please fill out the field</span> -->
                                     </div>
                                 </div>
                                 <div class="contact__form__row">
                                     <div class="contact__form__column__1">
-                                        <label class="label">MOBILE NUMBER</label>
+                                        <label class="label" for="phone2">MOBILE NUMBER</label>
                                         <div class="countrycode__wrap">
-                                            <input type="tel" class="countrycode"  name="countrycode" id="phone2">
-                                            <input type="tel" name="phone" placeholder="(+966) 920022222">
+                                            <input type="tel" class="countrycode"  name="countrycode2" id="countrycode2" value="966">
+                                            <input type="tel" name="phone2" placeholder="(+966) 920022222" id="phone2">
                                         </div>
                                         <!-- <span id="phone-error" class="error">Please fill out the field</span> -->
                                     </div>
                                     <div class="contact__form__column__1">
-                                        <label class="label">EMAIL</label>
+                                        <label class="label" for="email2">EMAIL</label>
                                         <input type="email" id="email" name="email2" placeholder="Enter your email">
                                         <!-- <span id="email-error" class="error">Please fill out the field</span> -->
                                     </div>
@@ -423,7 +422,7 @@
     </footer>
     <!-- footer ends here -->
     <!-- script for intl c:code  -->
-    <script src="./scripts/Validation.js"></script>
+    <script src="./scripts/Validation.js" defer></script>
 </body>
 
 </html>

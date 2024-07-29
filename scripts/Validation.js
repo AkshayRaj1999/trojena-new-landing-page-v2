@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  const input = document.querySelector("#phone");
+  const input = document.querySelector("#countrycode");
   window.intlTelInput(input, {
     utilsScript:
       "https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/js/utils.js",
     initialCountry: "SA",
   });
-  const input2 = document.querySelector("#phone2");
+  const input2 = document.querySelector("#countrycode2");
   window.intlTelInput(input2, {
     utilsScript:
       "https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/js/utils.js",
@@ -165,9 +165,8 @@ $(document).ready(function () {
       // $(".submission-wrap").addClass('show');
       // $('#contactForm')[0].reset();
       // $('.error').remove();
-      console.log();
-      //   return true;
+      // console.log();
+        return true;
     },
   });
 });
-//form--2
