@@ -9,6 +9,12 @@
         integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/js/intlTelInput.min.js"></script>
+
     <link rel="stylesheet" href="TrojenaStyle.css">
 </head>
 
@@ -20,7 +26,7 @@
                 <div class="navbar__container">
                     <div class="navbar__logo__container">
                         <a href="https://www.neom.com/en-us/regions/trojena" target="_blank">
-                            <img src="./Uploads/images/trojena-logo.svg" alt="trojena-logo">
+                            <img src="./Uploads/images/header-trojena-logo.svg" alt="trojena-logo">
                         </a>
                     </div>
                 </div>
@@ -81,37 +87,41 @@
                                     next year.
                                     Register your interest in NEOM's epic mountain destination today.</p>
                                 <div class="form__container">
-                                    <form id="trojena-form" action="mywork.php" method="POST"
+                                    <form id="trojena-form-1" action="mywork.php" method="POST"
                                         onsubmit="return validateForm()">
                                         <div class="contact__form__row__1">
                                             <div class="contact__form__column__1">
                                                 <label class="label">FIRST NAME</label>
-                                                <input type="text" id="fname" name="fname" placeholder="Enter your first name" pattern="[A-Za-z'-]{2,200}">
+                                                <input type="text" id="fname" name="fname"
+                                                    placeholder="Enter your first name">
                                                 <!-- <span id="fname-error" class="error">Please fill out the field</span> -->
                                             </div>
                                             <div class="contact__form__column__1">
                                                 <label class="label">LAST NAME</label>
-                                                <input type="text" id="lname" name="lname" placeholder="Enter your last name" pattern="[A-Za-z'-]{2,200}">
+                                                <input type="text" id="lname" name="lname"
+                                                    placeholder="Enter your last name">
                                                 <!-- <span id="lname-error" class="error">Please fill out the field</span> -->
                                             </div>
                                         </div>
                                         <div class="contact__form__row__2">
                                             <div class="contact__form__column__1">
                                                 <label class="label">MOBILE NUMBER</label>
-                                                <input type="tel" id="phone" name="phone" placeholder="(+966) 920022222"
-                                                title="Min. 7 and Max. 14" required pattern="[0-9]{7,14}" minlength="7" maxlength="14">
+                                                <div class="countrycode__wrap">
+                                                    <input type="tel" id="phone" name="countrycode" >
+                                                    <input type="tel" name="phone" placeholder="(+966) 920022222">
+                                                </div>
                                                 <!-- <span id="phone-error" class="error">Please fill out the field</span> -->
                                             </div>
                                             <div class="contact__form__column__1">
                                                 <label class="label">EMAIL</label>
-                                                <input type="email" id="email" name="email" placeholder="Enter your email">
-                                                <span id="email-error" class="error">Please fill out the field</span>
+                                                <input type="email" id="email" name="email"
+                                                    placeholder="Enter your email">
                                             </div>
                                         </div>
                                         <div class="contact__form__row__3">
                                             <p>Are You Interested in BUY an Off-Plan Home?</p>
                                             <div class="contact__form__input__fields">
-                                                <input type="radio" id="yes" value="YES" name="options">
+                                                <input type="radio" id="yes" value="YES" name="options" checked>
                                                 <label for="yes">Yes</label><br>
                                                 <input type="radio" id="no" value="NO" name="options">
                                                 <label for="no">No</label><br>
@@ -141,17 +151,14 @@
                                                     contacted by NEOM. If
                                                     you would also
                                                     like to hear updates from other parts of NEOM, please select
-                                                    <a class="contact__form__row__4__yes__btn" href="#">Yes</a>. We
+                                                    'Yes'. We
                                                     will treat your
                                                     information carefully. See our <a
                                                         href="https://policies.google.com/terms">Terms of
                                                         Use</a> and <a
                                                         href="https://policies.google.com/privacy">Privacy
                                                         Policy</a> for more details. This
-                                                    site is protected by reCAPTCHA and the Google <a
-                                                        href="https://policies.google.com/privacy">Privacy Policy</a>
-                                                    and <a href="https://policies.google.com/terms">Terms of Service</a>
-                                                    apply.
+                                                    site is protected by reCAPTCHA.
                                                 </span>
                                                 <span id="toggleButton">READ MORE</span>
                                             </p>
@@ -180,30 +187,34 @@
                             year.
                             Register your interest in NEOM's epic mountain destination today.</p>
                         <div class="form-container">
-                            <form id="trojena-form" action="mywork.php" method="POST" onsubmit="return validateForm()">
+                            <form id="trojena-form-2" action="mywork.php" method="POST"
+                                onsubmit="return validateForm()">
                                 <div class="contact__form__row">
                                     <div class="contact__form__column__1">
                                         <label class="label">FIRST NAME</label>
-                                        <input type="text" id="fname" name="fname" placeholder="Enter your first name" required
-                                        pattern="[A-Za-z'-]{2,200}">
+                                        <input type="text" id="fname2" name="fname-2"
+                                            placeholder="Enter your first name">
                                         <!-- <span id="fname-error" class="error">Please fill out the field</span> -->
                                     </div>
                                     <div class="contact__form__column__1">
                                         <label class="label">LAST NAME</label>
-                                        <input type="text" id="lname" name="lname" placeholder="Enter your last name" required
-                                        pattern="[A-Za-z'-]{2,200}">
+                                        <input type="text" id="lname2" name="lname-2"
+                                            placeholder="Enter your last name">
                                         <!-- <span id="lname-error" class="error">Please fill out the field</span> -->
                                     </div>
                                 </div>
                                 <div class="contact__form__row">
                                     <div class="contact__form__column__1">
                                         <label class="label">MOBILE NUMBER</label>
-                                        <input type="tel" id="phone2" name="phone2" placeholder="(+966) 920022222" title="Min. 7 and Max. 14" required pattern="[0-9]{7,14}" minlength="7" maxlength="14">
+                                        <div class="countrycode__wrap">
+                                            <input type="tel" class="countrycode"  name="countrycode" id="phone2">
+                                            <input type="tel" name="phone" placeholder="(+966) 920022222">
+                                        </div>
                                         <!-- <span id="phone-error" class="error">Please fill out the field</span> -->
                                     </div>
                                     <div class="contact__form__column__1">
                                         <label class="label">EMAIL</label>
-                                        <input type="email" id="email" name="email" placeholder="Enter your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                                        <input type="email" id="email" name="email2" placeholder="Enter your email">
                                         <!-- <span id="email-error" class="error">Please fill out the field</span> -->
                                     </div>
                                 </div>
@@ -211,7 +222,7 @@
                                     <p>Are You Interested in BUY an Off-Plan Home?</p>
                                     <!-- <span id="options-error" class="error">Please select an option</span> -->
                                     <div class="contact__form__input__fields">
-                                        <input type="radio" id="yes" value="YES" name="options">
+                                        <input type="radio" id="yes" value="YES" name="options" checked>
                                         <label for="yes">Yes</label><br>
                                         <input type="radio" id="no" value="NO" name="options">
                                         <label for="no">No</label><br>
@@ -222,14 +233,13 @@
                                 <div class="contact__form__row__4">
                                     <p>By completing this form you are agreeing to being contacted by NEOM. If you would
                                         also
-                                        like to hear updates from other parts of NEOM, please select <a
-                                            class="contact__form__row__4__yes__btn" href="#">Yes</a>. We will treat
+                                        like to hear updates from other parts of NEOM, please select 'Yes'. We will
+                                        treat
                                         your
                                         information carefully. See our <a href="./">Terms of Use</a> and <a
                                             href="./">Privacy
                                             Policy</a> for more details. This
-                                        site is protected by reCAPTCHA and the Google <a href="./">Privacy Policy</a>
-                                        and <a href="./">Terms of Service</a> apply.
+                                        site is protected by reCAPTCHA.
                                     </p>
                                     <button class="cta__button contact__form__button" type="submit">REGISTER</button>
                                 </div>
@@ -309,7 +319,7 @@
             <div class="trojena__footer__wrapper">
                 <div class="trojena__footer__logo__container">
                     <a href="https://www.neom.com/en-us/regions/trojena">
-                        <img src="./Uploads/images/footer-logo.svg" alt="trojena-logo">
+                        <img src="./Uploads/images/footer-trojena-logo.svg" alt="trojena-logo">
                     </a>
                 </div>
                 <div class="trojena__footer__social__media__links">
@@ -413,197 +423,7 @@
     </footer>
     <!-- footer ends here -->
     <!-- script for intl c:code  -->
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/js/intlTelInput.min.js"></script>
-    <script>
-        const input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/js/utils.js",
-            initialCountry: "SA"
-        });
-        const input2 = document.querySelector("#phone2");
-        window.intlTelInput(input2, {
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.6.1/build/js/utils.js",
-            initialCountry: "SA"
-        });
-
-        // form validation
-
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     const form = document.getElementById('trojena-form');
-        //     const fname = document.getElementById('fname');
-        //     const lname = document.getElementById('lname');
-        //     const phone = document.getElementById('phone2');
-        //     const email = document.getElementById('email');
-        //     const options = document.querySelectorAll('input[name="options"]');
-
-        //     const fnameError = document.getElementById('fname-error');
-        //     const lnameError = document.getElementById('lname-error');
-        //     const phoneError = document.getElementById('phone-error');
-        //     const emailError = document.getElementById('email-error');
-        //     const optionsError = document.getElementById('options-error');
-
-        //     form.addEventListener('submit', e => {
-        //         e.preventDefault();
-        //         if (validateInputs()) {
-        //             form.submit();
-        //         }
-        //     });
-
-        //     const isValidEmail = email => {
-        //         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        //         return re.test(String(email).toLowerCase());
-        //     }
-
-        //     const isValidPhoneNumber = phoneNumber => {
-        //         const re = /^\d{7,14}$/;
-        //         return re.test(String(phoneNumber));
-        //     }
-
-        //     const validateInputs = () => {
-        //         let isValid = true;
-
-        //         const fnameValue = fname.value.trim();
-        //         const lnameValue = lname.value.trim();
-        //         const emailValue = email.value.trim();
-        //         const phoneValue = phone.value.trim();
-        //         const selectedOption = Array.from(options).some(option => option.checked);
-
-        //         if (fnameValue === '') {
-        //             fnameError.style.display = "block";
-        //             isValid = false;
-        //         } else {
-        //             fnameError.style.display = "none";
-        //         }
-
-        //         if (lnameValue === '') {
-        //             lnameError.style.display = "block";
-        //             isValid = false;
-        //         } else {
-        //             lnameError.style.display = "none";
-        //         }
-
-        //         if (phoneValue === '') {
-        //             phoneError.innerHTML = "Please fill out the field";
-        //             phoneError.style.display = "block";
-        //             isValid = false;
-        //         } else if (!isValidPhoneNumber(phoneValue)) {
-        //             phoneError.innerHTML = "Enter a valid phone number";
-        //             phoneError.style.display = "block";
-        //             isValid = false;
-        //         } else {
-        //             phoneError.style.display = "none";
-        //         }
-
-        //         if (emailValue === '' || !isValidEmail(emailValue)) {
-        //             emailError.style.display = "block";
-        //             isValid = false;
-        //         } else {
-        //             emailError.style.display = "none";
-        //         }
-
-        //         if (!selectedOption) {
-        //             optionsError.style.display = "block";
-        //             isValid = false;
-        //         } else {
-        //             optionsError.style.display = "none";
-        //         }
-
-        //         return isValid;
-        //     }
-        // });
-
-        // const form = document.getElementById('trojena-form');
-        // const fname = document.getElementById('fname');
-        // const lname = document.getElementById('lname');
-        // const phone = document.getElementById('phone');
-        // const email = document.getElementById('email');
-        // const options = document.querySelectorAll('input[name="options"]');
-
-        // const fnameError = document.getElementById('fname-error');
-        // const lnameError = document.getElementById('lname-error');
-        // const phoneError = document.getElementById('phone-error');
-        // const emailError = document.getElementById('email-error');
-        // const optionsError = document.getElementById('options-error');
-
-        // form.addEventListener('submit', e => {
-        //     e.preventDefault();
-        //     if (validateInputs()) {
-        //         form.submit();
-        //     }
-        // });
-
-        // const isValidEmail = email => {
-        //     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        //     return re.test(String(email).toLowerCase());
-        // }
-
-        // const validateInputs = () => {
-        //     let isValid = true;
-
-        //     const fnameValue = fname.value.trim();
-        //     const lnameValue = lname.value.trim();
-        //     const emailValue = email.value.trim();
-        //     const phoneValue = phone.value.trim();
-        //     const selectedOption = Array.from(options).some(option => option.checked);
-
-        //     if (fnameValue === '') {
-        //         fnameError.style.display = "block";
-        //         isValid = false;
-        //     } else {
-        //         fnameError.style.display = "none";
-        //     }
-
-        //     if (lnameValue === '') {
-        //         lnameError.style.display = "block";
-        //         isValid = false;
-        //     } else {
-        //         lnameError.style.display = "none";
-        //     }
-
-        //     if (phoneValue === '') {
-        //         phoneError.style.display = "block";
-        //         isValid = false;
-        //     } else {
-        //         phoneError.style.display = "none";
-        //     }
-
-        //     if (emailValue === '' || !isValidEmail(emailValue)) {
-        //         emailError.style.display = "block";
-        //         isValid = false;
-        //     } else {
-        //         emailError.style.display = "none";
-        //     }
-        //     if (!selectedOption) {
-        //         optionsError.style.display = "block";
-        //         isValid = false;
-        //     } else {
-        //         optionsError.style.display = "none";
-        //     }
-
-        //     return isValid;
-        // }
-        // });
-        // script.js
-        document.addEventListener("DOMContentLoaded", function () {
-            const toggleButton = document.getElementById("toggleButton");
-            const moreText = document.getElementById("moreText");
-            const dots = document.getElementById("dots");
-
-            toggleButton.addEventListener("click", function () {
-                if (moreText.style.display === "none") {
-                    moreText.style.display = "inline";
-                    dots.style.display = "none";
-                    toggleButton.classList.add('show-less');
-                    toggleButton.textContent = 'SHOW LESS'; // Remove arrow text here
-                } else {
-                    moreText.style.display = "none";
-                    dots.style.display = "inline";
-                    toggleButton.classList.remove('show-less');
-                    toggleButton.textContent = 'READ MORE'; // Remove arrow text here
-                }
-            });
-        });
-    </script>
+    <script src="./scripts/Validation.js"></script>
 </body>
 
 </html>
