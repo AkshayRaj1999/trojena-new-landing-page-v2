@@ -105,8 +105,8 @@ $(document).ready(function () {
       // $(".submission-wrap").addClass('show');
       // $('#contactForm')[0].reset();
       // $('.error').remove();
-      console.log();
-      //   return true;
+      // console.log();
+        return true;
     },
   });
 
